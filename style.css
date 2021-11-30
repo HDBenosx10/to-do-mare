@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root{
+    --primary-color: #9C54E4;
+    --secondary-color: #FFFBFB;
+    --checked-color: #0ECA92;
+    --dark-checked-color: #16b384;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .8rem;
+    width: 100%;
+    font-family: 'Quicksand';
+}
+
+.tasks-todo, .tasks-done{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem .5rem 2rem .5rem;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+
+}
+
+h1.title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+h2.title {
+    align-self: flex-start;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.tasks {
+    margin-top:1rem ;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.task {
+    background: var(--secondary-color);
+    color: black;
+    padding: 1.2rem;
+    display: flex;
+    border-radius: 2px;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+}
+
+.task+.task{
+    margin-top: 1rem;
+}
+
+.add-box {
+    width: 100%;
+    padding: 0 1.2rem;
+}
+
+.add-box input {
+    background: var(--primary-color);
+    border: 0;
+    outline: 0;
+    color: var(--secondary-color);
+    width: 100%;
+    padding: 1.2rem 1.2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+
+}
+
+.add-box input::placeholder {
+    color: var(--secondary-color);
+    padding: 6px 0;
+    border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+
+.done-btn {
+    background: 0;
+    border: 0;
+    outline: 0;
+    margin-top:3px;
+    color: var(--checked-color);
+}
+
+.done-btn:hover{
+    cursor: pointer;
+    color: var(--dark-checked-color);
+}
+
+.done-btn span {
+    font-size: 35px;
+}
+
+.do-btn {
+    background: rgba(156, 84, 228, 0.1);
+    width: 30px;
+    height: 30px;
+    border:3px solid var(--checked-color);
+    border-radius: 50%;
+}
+
+.do-btn:hover {
+    background: rgba(156, 84, 228, 0.2);
+    border:3px solid var(--dark-checked-color);
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: 0;
+    border:0;
+    color: var(--checked-color);
+}
+
+.edit-btn:hover {
+    color: var(--dark-checked-color);
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: 0;
+    border:0;
+    color: #E30D0D;
+}
+
+.delete-btn:hover {
+    color: #c00b0b;
+    cursor: pointer;
+}
+
+.task .title {
+    margin-left: 1rem;
+}
+
+.options{
+    flex:1;
+    display: flex;
+    justify-content: end;
+}
