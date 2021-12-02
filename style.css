@@ -163,6 +163,10 @@ h2.title {
     margin-left: 1rem;
 }
 
+.tasks-done .task .title {
+    text-decoration: line-through;
+    color: rgb(85, 84, 84);
+}
 .options{
     flex:1;
     display: flex;
